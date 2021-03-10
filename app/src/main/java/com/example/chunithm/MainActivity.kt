@@ -93,6 +93,10 @@ class MainActivity : AppCompatActivity() {
         resultText.text=teisu.toString()
     }
 
+    fun saveData(view: View){
+
+    }
+
     private fun failed(){
         val resultText = findViewById<TextView>(R.id.textView5)
         resultText.text=getString(R.string.prog1)
