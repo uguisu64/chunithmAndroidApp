@@ -1,12 +1,10 @@
 package com.example.chunithm
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.TextView
+import android.widget.*
 import androidx.annotation.IntegerRes
 import androidx.annotation.NonNull
 import org.w3c.dom.Text
@@ -94,7 +92,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun saveData(view: View){
+        val filename = "SaveData.txt"
+        val resultText = findViewById<TextView>(R.id.textView5)
 
+
+    }
+
+    fun saveButtonVisible(view: View){
+        val saveButton = findViewById<Button>(R.id.button2)
+        saveButton.visibility
     }
 
     private fun failed(){
