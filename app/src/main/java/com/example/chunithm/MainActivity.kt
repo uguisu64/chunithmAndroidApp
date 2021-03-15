@@ -1,13 +1,11 @@
 package com.example.chunithm
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.View.INVISIBLE
+import android.view.View.VISIBLE
 import android.widget.*
-import androidx.annotation.IntegerRes
-import androidx.annotation.NonNull
-import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val score = t.toIntOrNull()
         if(score==null || score !in 0..1010000){
             failed()
+            saveButtonInvisible()
             return
         }
 
@@ -32,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         val beforeScore = t.toDoubleOrNull()
         if(beforeScore==null || beforeScore<0){
             failed()
+            saveButtonInvisible()
             return
         }
 
@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         val afterScore = t.toDoubleOrNull()
         if(afterScore==null || afterScore<0){
             failed()
+            saveButtonInvisible()
             return
         }
 
@@ -89,18 +90,22 @@ class MainActivity : AppCompatActivity() {
 
         val resultText = findViewById<TextView>(R.id.textView5)
         resultText.text=teisu.toString()
+        saveButtonVisible()
     }
 
     fun saveData(view: View){
         val filename = "SaveData.txt"
         val resultText = findViewById<TextView>(R.id.textView5)
-
-
     }
 
-    fun saveButtonVisible(view: View){
+    private fun saveButtonVisible(){
         val saveButton = findViewById<Button>(R.id.button2)
-        saveButton.visibility
+        saveButton.visibility = VISIBLE
+    }
+
+    private fun saveButtonInvisible(){
+        val saveButton = findViewById<Button>(R.id.button2)
+        saveButton.visibility = INVISIBLE
     }
 
     private fun failed(){
