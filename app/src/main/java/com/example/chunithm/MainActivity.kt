@@ -6,7 +6,6 @@ import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.*
-import java.io.FileNotFoundException
 
 class MainActivity : AppCompatActivity() {
 
@@ -99,10 +98,13 @@ class MainActivity : AppCompatActivity() {
         val filename = "SaveData.txt"
         val resultText = findViewById<TextView>(R.id.textView5)
         val titleText = findViewById<EditText>(R.id.editTextTextPersonName)
-        val result = resultText.text
-        val title = titleText.text
+        val result = resultText.text.toString()
+        val title = titleText.text.toString()
+        val text = result + title
 
         val out = openFileOutput(filename, MODE_APPEND)
+
+        out.write(text.toByteArray())
     }
 
     private fun saveButtonVisible(){
