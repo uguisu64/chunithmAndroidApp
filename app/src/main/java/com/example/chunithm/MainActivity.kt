@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
         val titleText = findViewById<EditText>(R.id.editTextTextPersonName)
         val result = resultText.text.toString()
         val title = titleText.text.toString()
-        val text = result + title
+        val text = "$result,$title"
 
         val out = openFileOutput(filename, MODE_APPEND)
 
