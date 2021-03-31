@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
         val titleText = findViewById<EditText>(R.id.editTextTextPersonName)
         val result = resultText.text.toString()
         val title = titleText.text.toString()
-        val text = "$result,$title"
+        val text = "$result,$title\n"
 
         val out = openFileOutput(filename, MODE_APPEND)
 
@@ -109,7 +109,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun toMemoListScene(view: View){
-        
+        val intent = Intent(this,Memolist::class.java)
+        startActivity(intent)
     }
 
     private fun saveButtonVisible(){

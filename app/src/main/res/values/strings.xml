@@ -13,4 +13,6 @@
     <string name="memolist">MemoList</string>
     <string name="save">SAVE</string>
     <string name="data">Data</string>
+    <string name="memo">Memo</string>
+    <string name="delete">Delete</string>
 </resources>
