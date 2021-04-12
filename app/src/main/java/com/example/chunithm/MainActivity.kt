@@ -106,6 +106,8 @@ class MainActivity : AppCompatActivity() {
         val out = openFileOutput(filename, MODE_APPEND)
 
         out.write(text.toByteArray())
+
+        saveButtonInvisible()
     }
 
     fun toMemoListScene(view: View){
