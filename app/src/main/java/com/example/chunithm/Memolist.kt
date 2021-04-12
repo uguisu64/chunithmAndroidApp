@@ -3,6 +3,8 @@ package com.example.chunithm
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.View.VISIBLE
+import android.widget.Button
 import android.widget.TextView
 import java.io.FileNotFoundException
 
@@ -40,5 +42,10 @@ class Memolist : AppCompatActivity() {
     fun deleteMemo(view: View){
         val filename = "SaveData.txt"
         deleteFile(filename)
+    }
+
+    fun ButtonVisible(view: View){
+        var deleteButton = findViewById<Button>(R.id.button5)
+        deleteButton.visibility=VISIBLE
     }
 }
