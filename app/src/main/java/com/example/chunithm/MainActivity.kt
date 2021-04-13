@@ -108,6 +108,7 @@ class MainActivity : AppCompatActivity() {
         out.write(text.toByteArray())
 
         saveButtonInvisible()
+        titleText.text.clear()
     }
 
     fun toMemoListScene(view: View){

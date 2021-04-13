@@ -42,6 +42,9 @@ class Memolist : AppCompatActivity() {
     fun deleteMemo(view: View){
         val filename = "SaveData.txt"
         deleteFile(filename)
+
+        val memoText = findViewById<TextView>(R.id.textView11)
+        memoText.text="No File"
     }
 
     fun ButtonVisible(view: View){
